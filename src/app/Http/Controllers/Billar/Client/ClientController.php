@@ -40,8 +40,8 @@ class ClientController extends Controller
             ->saveUser($password)
             ->roleAssign()
             ->clientStore()
-            ->profileStore()
-            ->clientInvitationMail($password);
+            ->profileStore();
+            // ->clientInvitationMail($password);
 
         return created_responses('clients');
     }
