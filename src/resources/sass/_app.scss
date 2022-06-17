@@ -1,0 +1,45 @@
+@import 'core/variables';
+@import 'core/theme-colors';
+
+.custom-modal {
+  background: var(--default-card-bg) !important;
+  position: absolute;
+  border-radius: 5px;
+  width: 510px;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  z-index: 1200;
+  font-size: 12px;
+  transition-duration: 300ms;
+}
+
+// Social link
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--base-color);
+
+  svg {
+    width: 22px;
+    height: 22px;
+    color: $brand-color;
+  }
+
+  i {
+    font-size: 22px;
+    color: $brand-color;
+  }
+}
+
+// Form - inputs
+.default-file {
+  .text-muted {
+    display: block;
+    margin-top: 8px;
+  }
+}
