@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
         User::query()->create([
             'first_name' => 'John',
             'last_name' => 'Doe',
-            'email' => 'admin@demo.com',
+            'email' => 'alhedayah@hyper-bill.com',
             'password' => Hash::make('123456'),
             'status_id' => Status::findByNameAndType('status_active', 'user')->id
         ]);
