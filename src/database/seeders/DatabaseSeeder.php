@@ -54,6 +54,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CurrencySeeder::class);
         $this->enableForeignKeys();
         Model::reguard();
-        $this->call(ClientSeeder::class);
+        // $this->call(ClientSeeder::class);
     }
 }
