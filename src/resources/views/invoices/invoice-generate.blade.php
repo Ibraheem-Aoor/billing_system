@@ -405,7 +405,7 @@
             </thead>
             <tbody>
             @foreach($invoice->invoiceDetails as $item)
-                <tr class="text-black">
+                <tr>
                     @if($item->product)
                         <td class="p-1">{{$item->product->name}}</td>
                     @endif

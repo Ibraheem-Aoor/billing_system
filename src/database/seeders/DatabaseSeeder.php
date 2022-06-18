@@ -33,27 +33,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Model::unguard();
-        // $this->disableForeignKeys();
+        Model::unguard();
+        $this->disableForeignKeys();
 
-        // $this->call(StatusSeeder::class);
-        // $this->call(TypeSeeder::class);
-        // $this->call(UserTableSeeder::class);
-        // $this->call(PermissionChildAppSeeder::class);
-        // $this->call(PermissionRoleTableSeeder::class);
-        // $this->call(UserRoleTableSeeder::class);
-        // $this->call(SettingTableSeeder::class);
-        // $this->call(CustomFieldTypeSeeder::class);
-        // $this->call(NotificationChannelTableSeeder::class);
-        // $this->call(NotificationEventTableSeeder::class);
-        // $this->call(NotificationSettingsSeeder::class);
-        // $this->call(NotificationTemplateSeeder::class);
-        // $this->call(PaymentMethodTableSeeder::class);
-        // $this->call(CountrySeeder::class);
-        // $this->call(RecurringSeeder::class);
-        // $this->call(CurrencySeeder::class);
-        // $this->enableForeignKeys();
-        // Model::reguard();
+        $this->call(StatusSeeder::class);
+        $this->call(TypeSeeder::class);
+        $this->call(UserTableSeeder::class);
+        $this->call(PermissionChildAppSeeder::class);
+        $this->call(PermissionRoleTableSeeder::class);
+        $this->call(UserRoleTableSeeder::class);
+        $this->call(SettingTableSeeder::class);
+        $this->call(CustomFieldTypeSeeder::class);
+        $this->call(NotificationChannelTableSeeder::class);
+        $this->call(NotificationEventTableSeeder::class);
+        $this->call(NotificationSettingsSeeder::class);
+        $this->call(NotificationTemplateSeeder::class);
+        $this->call(PaymentMethodTableSeeder::class);
+        $this->call(CountrySeeder::class);
+        $this->call(RecurringSeeder::class);
+        $this->call(CurrencySeeder::class);
+        $this->enableForeignKeys();
+        Model::reguard();
         $this->call(ClientSeeder::class);
     }
 }
