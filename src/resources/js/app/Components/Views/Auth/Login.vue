@@ -34,7 +34,7 @@
               </div>
             </div>
 
-            <div class="form-row" v-if="marketPlaceVersion">
+            <!-- <div class="form-row" v-if="marketPlaceVersion">
               <div class="form-group col-12">
                 <label>{{ $t("user_role") }}</label>
                 <app-input
@@ -46,7 +46,7 @@
                   :list="userTypeList"
                 />
               </div>
-            </div>
+            </div> -->
 
             <div class="form-row">
               <div class="form-group col-12 px-0">
