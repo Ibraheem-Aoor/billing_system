@@ -22,7 +22,7 @@ class PurchaseCodeController extends Controller
     public function purchaseCodeStore(Request $request)
     {
         $request->validate([
-            'code' => 'required|min:3|regex:/^[^#]+$/U',
+            'code' => 'required|min:3',
         ]);
         $this->service->savePurchaseCode($request);
         return response()->json(['status' => true, 'message' => trans('default.purchase_code_verified')]);

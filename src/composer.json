@@ -15,15 +15,16 @@
         "barryvdh/laravel-dompdf": "^0.9.0",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
+        "gainhq/installer": "*",
         "intervention/image": "^2.5",
         "laravel/framework": "^8.0",
         "laravel/legacy-factories": "^1.0",
         "laravel/nexmo-notification-channel": "^2.3",
         "laravel/tinker": "^2.0",
+        "niklasravnsborg/laravel-pdf": "^4.1",
         "paypal/rest-api-sdk-php": "*",
         "spatie/laravel-activitylog": "^3.9",
-        "stripe/stripe-php": "^7.77",
-        "gainhq/installer": "*"
+        "stripe/stripe-php": "^7.77"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
