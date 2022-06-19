@@ -41,7 +41,7 @@ class InvoiceDownloadController extends Controller
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-           return AnonyPDF::HTML($pdfarr);
+          AnonyPDF::HTML($pdfarr);
         // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
