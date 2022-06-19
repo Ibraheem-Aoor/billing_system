@@ -93,13 +93,5 @@ return function ($rootDir) {
                 'italic' => $distFontDir . '/DejaVuSerif-Italic',
                 'normal' => $distFontDir . '/DejaVuSerif'
             ],
-
-            'arial' => 
-              [
-                'normal' => $distFontDir . '/arial-regular',
-                'bold' => $distFontDir . '/arial-regular',
-                'italic' => $distFontDir . '/arial-regular',
-                'bold_italic' => $distFontDir . '/arial-regular',
-            ],
     ];
 };
