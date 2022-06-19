@@ -11,7 +11,6 @@ class InvoiceDownloadController extends Controller
 {
     public function download(Invoice $invoice)
     {
-      return dd('aa');
         $invoiceInfo = $invoice->load(['invoiceDetails' => function ($query) {
             $query->with('product:id,name', 'tax:id,name,value');
         }, 'client.profile', 'createdBy.profile']);
@@ -20,7 +19,7 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = \SPDF::loadView('invoices.invoice-generate', [
+        $pdf = SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
