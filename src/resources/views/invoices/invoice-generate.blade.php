@@ -1,14 +1,16 @@
 <!Doctype html>
 <html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ config('app.name') }}</title>
-    <link rel="shortcut icon" href="{{ env('APP_URL').config('settings.application.company_icon') }}"/>
-    <link rel="apple-touch-icon" href="{{ env('APP_URL').config('settings.application.company_icon') }}"/>
-    <link rel="apple-touch-icon-precomposed" href="{{ env('APP_URL').config('settings.application.company_icon') }}"/>
+    <link rel="shortcut icon" href="{{ env('APP_URL') . config('settings.application.company_icon') }}" />
+    <link rel="apple-touch-icon" href="{{ env('APP_URL') . config('settings.application.company_icon') }}" />
+    <link rel="apple-touch-icon-precomposed"
+        href="{{ env('APP_URL') . config('settings.application.company_icon') }}" />
 
     <style>
         /* dev */
@@ -32,11 +34,12 @@
             background-color: transparent !important;
         }
 
-        /* * {
-            font-family: Arial;
+        * {
+            font-family: DejaVu Sans, sans-serif;
+            direction: rtl;
             margin: 0;
             padding: 0;
-        } */
+        }
 
         /*common*/
         .m-0 {
@@ -299,24 +302,20 @@
             font-size: large
         }
 
-        .table-strip {
-        }
+        .table-strip {}
 
         .table-strip tr:nth-child(even) {
             background-color: #f8f8f8;
         }
 
         /*layout*/
-        .invoice_container {
-        }
+        .invoice_container {}
 
         .invoice_container * {
             box-sizing: content-box;
         }
 
-        .invoice_container__item {
-
-        }
+        .invoice_container__item {}
 
         .logo {
             width: 96px;
@@ -327,165 +326,166 @@
             border: none;
             height: 1px;
         }
-
     </style>
 </head>
 
 <body>
-<div class="invoice_container">
-    <div class="invoice_container__item px-5 mt-5 text-black">
-        <div class="w-25 f-left p-2">
-            <div>
-                <img class="logo" src="{{ env('APP_URL').config('settings.application.invoice_logo')}}" alt="NF">
+    <div class="invoice_container">
+        <div class="invoice_container__item px-5 mt-5 text-black">
+            <div class="w-25 f-left p-2">
+                <div>
+                    <img class="logo" src="{{ env('APP_URL') . config('settings.application.invoice_logo') }}"
+                        alt="NF">
+                </div>
             </div>
-        </div>
-        <div class="w-50 f-right text-right">
-            <h1 class="bold text-black text-capital">Invoice</h1>
-            <table class="f-right w-75 font-xm mt-3">
-                <tr>
-                    <td class="bold">{{__t('invoice_no')}}</td>
-                    <td>:</td>
-                    <td class="text-right">{{$invoice->invoice_number}}</td>
-                </tr>
-                <tr>
-                    <td class="bold">{{__t('date')}}</td>
-                    <td>:</td>
-                    <td class="text-right">{{$invoice->date}}</td>
-                </tr>
-                <tr>
-                    <td class="bold">{{__t('due_date')}}</td>
-                    <td>:</td>
-                    <td class="text-right">{{$invoice->due_date}}</td>
-                </tr>
-            </table>
+            <div class="w-50 f-right text-right">
+                <h1 class="bold text-black text-capital">Invoice</h1>
+                <table class="f-right w-75 font-xm mt-3">
+                    <tr>
+                        <td class="bold">{{ __t('invoice_no') }}</td>
+                        <td>:</td>
+                        <td class="text-right">{{ $invoice->invoice_number }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">{{ __t('date') }}</td>
+                        <td>:</td>
+                        <td class="text-right">{{ $invoice->date }}</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">{{ __t('due_date') }}</td>
+                        <td>:</td>
+                        <td class="text-right">{{ $invoice->due_date }}</td>
+                    </tr>
+                </table>
+                <div class="f-clear"></div>
+            </div>
             <div class="f-clear"></div>
         </div>
-        <div class="f-clear"></div>
-    </div>
-    {{--        <hr class="hr">--}}
-    <div class="invoice_container__item p-5 text-black">
-        <div class="w-50 f-left font-xm">
-            <p class="bold">{{__t('from')}}</p>
-            @if($invoice->createdBy)
-                <p>{{$invoice->createdBy->full_name}}</p>
-                @if($invoice->createdBy->profile)
-                    <small>{{__t('contact')}}: {{$invoice->createdBy->profile->contact}}</small>
-                    <br>
-                    <small>{{__t('address')}}: {{$invoice->createdBy->profile->address}}</small>
+        {{-- <hr class="hr"> --}}
+        <div class="invoice_container__item p-5 text-black">
+            <div class="w-50 f-left font-xm">
+                <p class="bold">{{ __t('from') }}</p>
+                @if ($invoice->createdBy)
+                    <p>{{ $invoice->createdBy->full_name }}</p>
+                    @if ($invoice->createdBy->profile)
+                        <small>{{ __t('contact') }}: {{ $invoice->createdBy->profile->contact }}</small>
+                        <br>
+                        <small>{{ __t('address') }}: {{ $invoice->createdBy->profile->address }}</small>
+                    @endif
                 @endif
+            </div>
+            <div class="w-50 f-right font-xm">
+                <div class="w-75 f-right">
+                    <p class="bold">{{ __t('to') }}</p>
+                    @if ($invoice->client)
+                        <p>{{ $invoice->client->full_name }}</p>
+                        @if ($invoice->client->profile)
+                            <small>{{ __t('contact') }}: {{ $invoice->client->profile->contact }}</small>
+                            <br>
+                            <small>{{ __t('address') }}: {{ $invoice->client->profile->address }}</small>
+                        @endif
+                    @endif
+                </div>
+                <div class="f-clear"></div>
+            </div>
+            <div class="f-clear"></div>
+        </div>
+        {{-- <hr class="hr"> --}}
+        <div class="invoice_container__item px-5">
+            <table class="w-100 font-xm table-strip" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr class="bg-dark text-light">
+                        <th class="w-45 p-1 text-left">{{ __t('product') }}</th>
+                        <th class="w-10 p-1 text-right">{{ __t('quantity') }}</th>
+                        <th class="w-15 p-1 text-right">{{ __t('unit_price') }}</th>
+                        <th class="w-15 p-1 text-right">{{ __t('tax') }} </th>
+                        <th class="w-15 p-1 text-right">{{ __t('total') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($invoice->invoiceDetails as $item)
+                        <tr>
+                            @if ($item->product)
+                                <td class="p-1">{{ $item->product->name }}</td>
+                            @endif
+                            <td class="p-1 text-right">{{ $item->quantity }}</td>
+                            <td class="p-1 text-right">{{ number_with_currency_symbol($item->price) }}</td>
+                            <td class="p-1 text-right">
+                                @if ($item->tax)
+                                    {{ $item->tax->value . '%' }}
+                                @else
+                                    <span>N/A</span>
+                                @endif
+                            </td>
+                            <td class="p-1 text-right">
+                                {{ number_with_currency_symbol(
+                                    $item->quantity * $item->price + $item->quantity * $item->price * ($item->tax ? $item->tax->value / 100 : 0),
+                                ) }}
+                            </td>
+                        </tr>
+                    @endforeach
+                    <tr class="bg-transparent text-black">
+                        <td colspan="5">
+                            <div class="hr mt-2"></div>
+                        </td>
+                    </tr>
+                    <tr class="bg-transparent text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="bold p-1">{{ __t('sub_total') }} :</td>
+                        <td class="text-right p-1">{{ number_with_currency_symbol($invoice->sub_total) }}</td>
+                    </tr>
+                    <tr class="bg-transparent text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="bold p-1">{{ __t('tax') }} :</td>
+                        <td class="text-right p-1">{{ number_with_currency_symbol($invoice->totalTax) }}</td>
+                    </tr>
+                    <tr class="bg-transparent text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="bold p-1">{{ __t('discount') }} :</td>
+                        @if ($invoice->discount_type == 'percentage')
+                            <td class="text-right p-1">{{ $invoice->discount }} %</td>
+                        @else
+                            <td class="text-right p-1">{{ number_with_currency_symbol($invoice->discount) }}</td>
+                        @endif
+                    </tr>
+                    <tr class="bg-transparent text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="bold p-1">{{ __t('total') }} :</td>
+                        <td class="text-right p-1">{{ number_with_currency_symbol($invoice->total) }}</td>
+                    </tr>
+                    <tr class="bg-transparent text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="bold p-1">{{ __t('paid') }} :</td>
+                        <td colspan="2" class="text-right p-1">
+                            {{ number_with_currency_symbol($invoice->received_amount) }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bg-transparent"></td>
+                        <td colspan="3" class="bg-transparent">
+                            <div class="hr mt-2"></div>
+                        </td>
+                    </tr>
+                    <tr class="bg-transparent bold text-black">
+                        <td colspan="2"></td>
+                        <td colspan="2" class="p-1">{{ __t('due_amount') }} :</td>
+                        <td class="text-right p-1">{{ number_with_currency_symbol($invoice->due_amount) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="invoice_container__item p-5 font-xm">
+        <div>
+            @if ($invoice->notes)
+                <div class="bold">{{ __t('notes') }}</div>
+                <p>{!! $invoice->notes !!}</p>
+            @endif
+
+            @if ($invoice->terms)
+                <div class="bold mt-3">{{ __t('terms') }}</div>
+                <p>{!! $invoice->terms !!}</p>
             @endif
         </div>
-        <div class="w-50 f-right font-xm">
-            <div class="w-75 f-right">
-                <p class="bold">{{__t('to')}}</p>
-                @if($invoice->client)
-                    <p>{{$invoice->client->full_name}}</p>
-                    @if($invoice->client->profile)
-                        <small>{{__t('contact')}}: {{$invoice->client->profile->contact}}</small>
-                        <br>
-                        <small>{{__t('address')}}: {{$invoice->client->profile->address}}</small>
-                    @endif
-                @endif
-            </div>
-            <div class="f-clear"></div>
-        </div>
-        <div class="f-clear"></div>
     </div>
-    {{--    <hr class="hr">--}}
-    <div class="invoice_container__item px-5">
-        <table class="w-100 font-xm table-strip" border="0" cellspacing="0" cellpadding="0">
-            <thead>
-            <tr class="bg-dark text-light">
-                <th class="w-45 p-1 text-left">{{__t('product')}}</th>
-                <th class="w-10 p-1 text-right">{{__t('quantity')}}</th>
-                <th class="w-15 p-1 text-right">{{__t('unit_price')}}</th>
-                <th class="w-15 p-1 text-right">{{__t('tax')}} </th>
-                <th class="w-15 p-1 text-right">{{__t('total')}}</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($invoice->invoiceDetails as $item)
-                <tr>
-                    @if($item->product)
-                        <td class="p-1">{{$item->product->name}}</td>
-                    @endif
-                    <td class="p-1 text-right">{{$item->quantity}}</td>
-                    <td class="p-1 text-right">{{number_with_currency_symbol($item->price)}}</td>
-                    <td class="p-1 text-right">
-                        @if($item->tax)
-                            {{$item->tax->value . '%'}}
-                        @else
-                            <span>N/A</span>
-                        @endif
-                    </td>
-                    <td class="p-1 text-right">
-                        {{number_with_currency_symbol(
-                        (($item->quantity * $item->price)+($item->quantity * $item->price) * ($item->tax ? ($item->tax->value /100) : 0 ))
-                        )}}
-                    </td>
-                </tr>
-            @endforeach
-            <tr class="bg-transparent text-black">
-                <td colspan="5">
-                    <div class="hr mt-2"></div>
-                </td>
-            </tr>
-            <tr class="bg-transparent text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="bold p-1">{{__t('sub_total')}} :</td>
-                <td class="text-right p-1">{{number_with_currency_symbol($invoice->sub_total)}}</td>
-            </tr>
-            <tr class="bg-transparent text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="bold p-1">{{__t('tax')}} :</td>
-                <td class="text-right p-1">{{number_with_currency_symbol($invoice->totalTax)}}</td>
-            </tr>
-            <tr class="bg-transparent text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="bold p-1">{{__t('discount')}} :</td>
-                @if($invoice->discount_type == 'percentage')
-                    <td class="text-right p-1">{{$invoice->discount}} %</td>
-                @else
-                    <td class="text-right p-1">{{number_with_currency_symbol($invoice->discount)}}</td>
-                @endif
-            </tr>
-            <tr class="bg-transparent text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="bold p-1">{{__t('total')}} :</td>
-                <td class="text-right p-1">{{number_with_currency_symbol($invoice->total)}}</td>
-            </tr>
-            <tr class="bg-transparent text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="bold p-1">{{__t('paid')}} :</td>
-                <td colspan="2" class="text-right p-1">{{number_with_currency_symbol($invoice->received_amount)}}</td>
-            </tr>
-            <tr>
-                <td colspan="2" class="bg-transparent"></td>
-                <td colspan="3" class="bg-transparent">
-                    <div class="hr mt-2"></div>
-                </td>
-            </tr>
-            <tr class="bg-transparent bold text-black">
-                <td colspan="2"></td>
-                <td colspan="2" class="p-1">{{__t('due_amount')}} :</td>
-                <td class="text-right p-1">{{number_with_currency_symbol($invoice->due_amount)}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<div class="invoice_container__item p-5 font-xm">
-    <div>
-        @if($invoice->notes)
-            <div class="bold">{{__t('notes')}}</div>
-            <p>{!! $invoice->notes !!}</p>
-        @endif
-
-        @if($invoice->terms)
-            <div class="bold mt-3">{{__t('terms')}}</div>
-            <p>{!! $invoice->terms !!}</p>
-        @endif
-    </div>
-</div>
 </body>
