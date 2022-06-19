@@ -22,7 +22,7 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = DomPDFPDF::loadView('invoices.invoice-generate', [
+        $pdf = PDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
