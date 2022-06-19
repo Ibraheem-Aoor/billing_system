@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Billar\Invoice;
 use App\Http\Controllers\Controller;
 use App\Models\Billar\Invoice\Invoice;
 use PDF;
+use SPDF;
 
 class InvoiceDownloadController extends Controller
 {
@@ -18,7 +19,7 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = PDF::loadView('invoices.invoice-generate', [
+        $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
