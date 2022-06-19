@@ -80,7 +80,6 @@ class InvoicePaymentService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo): self
     {
-      return dd('InvoicePayment');
 
         $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
