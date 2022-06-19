@@ -33,16 +33,16 @@ class InvoiceDownloadController extends Controller
           'font-size'=>12, // font-size 
           'text'=>'', //Write
           'rtl'=>true, //true or false 
-          // 'creator'=>'phpanonymous', // creator file - you can remove this key
-          // 'keywords'=>'phpanonymous keywords', // keywords file - you can remove this key
-          // 'subject'=>'phpanonymous subject', // subject file - you can remove this key
-          // 'filename'=>'phpanonymous.pdf', // filename example - invoice.pdf
-          // 'display'=>'print', // stream , download , print
+          'creator'=>'phpanonymous', // creator file - you can remove this key
+          'keywords'=>'phpanonymous keywords', // keywords file - you can remove this key
+          'subject'=>'phpanonymous subject', // subject file - you can remove this key
+          'filename'=>'phpanonymous.pdf', // filename example - invoice.pdf
+          'display'=>'stream', // stream , download , print
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-        $downloadalbePdf = TPDF::HTML($pdfarr);
-        return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
+        return TPDF::HTML($pdfarr);
+        // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
     protected function productTaxSum($quantity, $price, $taxValue)
