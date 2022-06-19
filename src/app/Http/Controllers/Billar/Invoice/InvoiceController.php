@@ -92,12 +92,13 @@ class InvoiceController extends Controller
 
     public function destroy(Invoice $invoice)
     {
-      if($invoice->status != 'Paid')
-          return back();
+      if($invoice->status == 'Paid')
+      {
         $this->service
-            ->setModel($invoice)
-            ->delete();
+        ->setModel($invoice)
+        ->delete();
         return deleted_responses('invoices');
+      }
     }
 
     public function detailsDelete()
