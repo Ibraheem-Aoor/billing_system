@@ -10,6 +10,7 @@ use App\Models\Core\Status;
 use App\Services\Billar\ApplicationBaseService;
 use PDF;
 use Illuminate\Support\Facades\Storage;
+use SPDF;
 
 class PaymentHistoryService extends ApplicationBaseService
 {
@@ -83,7 +84,7 @@ class PaymentHistoryService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo):self
     {
-        $pdf = PDF::loadView('invoices.invoice-generate', [
+        $pdf = SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
 
