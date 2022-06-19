@@ -92,7 +92,8 @@ class InvoiceController extends Controller
 
     public function destroy(Invoice $invoice)
     {
-      if($invoice->status == 'Paid')
+      $d = Invoice::with('status')->findOrFail($invoice);
+      if($d->status->name == 'status_paid')
         {
           $this->service
           ->setModel($invoice)
