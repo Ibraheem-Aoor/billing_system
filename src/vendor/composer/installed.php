@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '523e164b006e51631e4294fe4626c40c1c681f57',
+        'reference' => '675a23f8d8cda789b2b23ec5f3e9e13588c843cf',
         'name' => 'gainhq/core.laravel',
         'dev' => true,
     ),
@@ -334,7 +334,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '523e164b006e51631e4294fe4626c40c1c681f57',
+            'reference' => '675a23f8d8cda789b2b23ec5f3e9e13588c843cf',
             'dev_requirement' => false,
         ),
         'gainhq/installer' => array(
@@ -863,6 +863,17 @@
             'install_path' => __DIR__ . '/../paypal/rest-api-sdk-php',
             'aliases' => array(),
             'reference' => '72e2f2466975bf128a31e02b15110180f059fc04',
+            'dev_requirement' => false,
+        ),
+        'pdfanonymous/phpanonymous' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pdfanonymous/phpanonymous',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '172ee39834a22398d24c7948f2bbfc918defc0fd',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
@@ -1672,6 +1683,15 @@
             'aliases' => array(),
             'reference' => 'd7f637cc0f0cc14beb0984f2bb50da560b271311',
             'dev_requirement' => true,
+        ),
+        'tecnickcom/tcpdf' => array(
+            'pretty_version' => '6.2.26',
+            'version' => '6.2.26.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tecnickcom/tcpdf',
+            'aliases' => array(),
+            'reference' => '367241059ca166e3a76490f4448c284e0a161f15',
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
