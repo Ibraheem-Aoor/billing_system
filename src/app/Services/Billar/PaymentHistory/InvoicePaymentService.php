@@ -11,6 +11,7 @@ use App\Services\Billar\ApplicationBaseService;
 use Stripe\{Charge, Customer, Stripe};
 use Illuminate\Support\Facades\Storage;
 use PDF;
+use SPDF;
 
 class InvoicePaymentService extends ApplicationBaseService
 {
@@ -79,7 +80,7 @@ class InvoicePaymentService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo): self
     {
-        $pdf = PDF::loadView('invoices.invoice-generate', [
+        $pdf = SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
 
