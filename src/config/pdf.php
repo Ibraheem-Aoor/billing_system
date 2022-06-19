@@ -15,7 +15,7 @@ return [
 
   'font_path' => base_path('resources/fonts/'),
 	'font_data' => [
-		'examplefont' => [
+		'DejaVuSans' => [
 			'R'  => 'DejaVuSans-Regular.ttf',    // regular font
 			'B'  => 'DejaVuSans-Bold.ttf',       // optional: bold font
 			'I'  => 'DejaVuSans-Italic.ttf',     // optional: italic font
