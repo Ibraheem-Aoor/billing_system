@@ -112,7 +112,7 @@
     "repositories": [
         {
             "type": "path",
-            "url":  "./package/installer",
+            "url":  "../package/installer",
             "options": {
                 "symlink": false
             }

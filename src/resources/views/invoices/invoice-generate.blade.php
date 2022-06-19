@@ -34,10 +34,6 @@
             background-color: transparent !important;
         }
 
-        @font-face {
-            font-family: Arial;
-            src: url('../../../../vendor/dompdf/dompdf/lib/fonts/arial.ttf');
-        }
 
         * {
             font-family: Arial;
