@@ -34,8 +34,13 @@
             background-color: transparent !important;
         }
 
+        @font-face {
+            font-family: Arial;
+            src: url('../../../../vendor/dompdf/dompdf/lib/fonts');
+        }
+
         * {
-            font-family: DejaVu Sans, sans-serif;
+            font-family: Arial;
             direction: rtl;
             margin: 0;
             padding: 0;
