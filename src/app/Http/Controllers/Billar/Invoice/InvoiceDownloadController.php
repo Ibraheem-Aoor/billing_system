@@ -25,8 +25,6 @@ class InvoiceDownloadController extends Controller
         $pdf = DomPDFPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
-        $pdf->autoScriptToLang = true;
-        $pdf->autoLangToFont  = true;
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 

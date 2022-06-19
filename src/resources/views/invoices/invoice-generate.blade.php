@@ -11,7 +11,9 @@
     <link rel="apple-touch-icon" href="{{ env('APP_URL') . config('settings.application.company_icon') }}" />
     <link rel="apple-touch-icon-precomposed"
         href="{{ env('APP_URL') . config('settings.application.company_icon') }}" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
     <style>
         /* dev */
         .t {
@@ -37,7 +39,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
 
         * {
-          font-family: 'Cairo', sans-serif;
+            font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
         }
