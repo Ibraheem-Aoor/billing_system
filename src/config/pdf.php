@@ -13,7 +13,7 @@ return [
 	'pdf_a_auto'            => false,
 	'icc_profile_path'      => '',
 
-  'font_path' => base_path('resources/fonts/'),
+  'font_path' => __DIR__.'/resources/fonts/',
 	'font_data' => [
 		'arial' => [
 			'R'  => '../public/assets/arial.ttf',    // regular font
