@@ -41,7 +41,7 @@ class InvoiceDownloadController extends Controller
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-           \TPDF::HTML($pdfarr);
+           return \TPDF::HTML($pdfarr)->download();
         // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
