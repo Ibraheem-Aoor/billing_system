@@ -26,6 +26,7 @@
 
     @stack('before-scripts')
     <script>
+      $(".horizontal-menu .nav li:last").hide();
 
         window.localStorage.setItem('app-language', '<?php echo app()->getLocale() ?? "en"; ?>');
 
@@ -39,6 +40,7 @@
 
         window.localStorage.setItem('base_url', '{!! request()->root() !!}');
 
+        
     </script>
     {!! script('https://checkout.stripe.com/checkout.js') !!}
     {!! script('https://www.paypalobjects.com/api/checkout.js') !!}
