@@ -92,6 +92,8 @@ class InvoiceController extends Controller
 
     public function destroy(Invoice $invoice)
     {
+      if($invoice->status != 'Paid')
+          return back();
         $this->service
             ->setModel($invoice)
             ->delete();
