@@ -24,10 +24,25 @@ class InvoiceDownloadController extends Controller
         $pdf = view('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ])->render();
-        $downloadablePDf = TPDF::HTML($pdf);
+        $pdfarr = [
+          // 'title'=>'اهلا بكم ',
+          'data'=>$pdf, // render file blade with content html
+          'header'=>['show'=>false], // header content
+          'footer'=>['show'=>false], // Footer content
+          'font'=>'aealarabiya', //  dejavusans, aefurat ,aealarabiya ,times
+          'font-size'=>12, // font-size 
+          'text'=>'', //Write
+          'rtl'=>true, //true or false 
+          // 'creator'=>'phpanonymous', // creator file - you can remove this key
+          // 'keywords'=>'phpanonymous keywords', // keywords file - you can remove this key
+          // 'subject'=>'phpanonymous subject', // subject file - you can remove this key
+          // 'filename'=>'phpanonymous.pdf', // filename example - invoice.pdf
+          // 'display'=>'print', // stream , download , print
+        ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-        return $downloadablePDf->download('invoice' . $invoice->invoice_number . '.pdf');
+        $downloadalbePdf = TPDF::HTML($pdfarr);
+        return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
     protected function productTaxSum($quantity, $price, $taxValue)
