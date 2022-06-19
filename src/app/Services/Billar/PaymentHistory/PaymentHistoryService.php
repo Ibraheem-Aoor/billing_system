@@ -8,7 +8,6 @@ use App\Models\Billar\Invoice\Invoice;
 use App\Models\Billar\PaymentHistory\PaymentHistory;
 use App\Models\Core\Status;
 use App\Services\Billar\ApplicationBaseService;
-use PDF;
 use Illuminate\Support\Facades\Storage;
 use SPDF;
 

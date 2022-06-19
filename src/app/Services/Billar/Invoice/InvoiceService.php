@@ -9,7 +9,6 @@ use App\Models\Billar\Invoice\Invoice;
 use App\Models\Billar\Invoice\InvoiceDetail;
 use App\Services\Billar\ApplicationBaseService;
 use Illuminate\Support\Facades\Storage;
-use PDF;
 
 class InvoiceService extends ApplicationBaseService
 {
