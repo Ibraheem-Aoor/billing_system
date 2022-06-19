@@ -96,7 +96,7 @@ class InvoiceController extends Controller
         {
           $this->service
           ->setModel($invoice)
-          ->delete();
+          ->forecDelete();
           return deleted_responses('invoices');
         }
     }
