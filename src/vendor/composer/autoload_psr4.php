@@ -72,6 +72,7 @@ return array(
     'Nexmo\\Laravel\\' => array($vendorDir . '/nexmo/laravel/src'),
     'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Meneses\\LaravelMpdf\\' => array($vendorDir . '/carlos-meneses/laravel-mpdf/src'),
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'League\\Config\\' => array($vendorDir . '/league/config/src'),

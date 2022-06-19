@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '675a23f8d8cda789b2b23ec5f3e9e13588c843cf',
+        'reference' => 'e1bc4602b5b6ee6df48981545a76dcb08ea8f9f8',
         'name' => 'gainhq/core.laravel',
         'dev' => true,
     ),
@@ -80,6 +80,15 @@
             'install_path' => __DIR__ . '/../brick/math',
             'aliases' => array(),
             'reference' => 'ca57d18f028f84f777b2168cd1911b0dee2343ae',
+            'dev_requirement' => false,
+        ),
+        'carlos-meneses/laravel-mpdf' => array(
+            'pretty_version' => '2.1.8',
+            'version' => '2.1.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../carlos-meneses/laravel-mpdf',
+            'aliases' => array(),
+            'reference' => '680d0c561d0df857791f2d79611d1bdb6bc971fd',
             'dev_requirement' => false,
         ),
         'codedungeon/php-cli-colors' => array(
@@ -334,7 +343,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '675a23f8d8cda789b2b23ec5f3e9e13588c843cf',
+            'reference' => 'e1bc4602b5b6ee6df48981545a76dcb08ea8f9f8',
             'dev_requirement' => false,
         ),
         'gainhq/installer' => array(

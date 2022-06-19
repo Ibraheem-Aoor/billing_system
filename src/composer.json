@@ -13,6 +13,7 @@
         "altek/eventually": "^2.0",
         "aws/aws-sdk-php": "^3.171",
         "barryvdh/laravel-dompdf": "^0.9.0",
+        "carlos-meneses/laravel-mpdf": "^2.1",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
         "gainhq/installer": "*",

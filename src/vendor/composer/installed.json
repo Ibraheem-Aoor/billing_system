@@ -553,6 +553,65 @@
             "install-path": "../brick/math"
         },
         {
+            "name": "carlos-meneses/laravel-mpdf",
+            "version": "2.1.8",
+            "version_normalized": "2.1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mccarlosen/laravel-mpdf.git",
+                "reference": "680d0c561d0df857791f2d79611d1bdb6bc971fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mccarlosen/laravel-mpdf/zipball/680d0c561d0df857791f2d79611d1bdb6bc971fd",
+                "reference": "680d0c561d0df857791f2d79611d1bdb6bc971fd",
+                "shasum": ""
+            },
+            "require": {
+                "mpdf/mpdf": "^8.0.17",
+                "php": "^7.4|^8.0"
+            },
+            "time": "2022-03-03T15:48:28+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider"
+                    ],
+                    "aliases": {
+                        "PDF": "Meneses\\LaravelMpdf\\Facades\\LaravelMpdf"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Meneses\\LaravelMpdf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel Mpdf: Using Mpdf in Laravel to generate Pdfs.",
+            "keywords": [
+                "laravel",
+                "mpdf",
+                "pdf"
+            ],
+            "support": {
+                "issues": "https://github.com/mccarlosen/laravel-mpdf/issues",
+                "source": "https://github.com/mccarlosen/laravel-mpdf/tree/2.1.8"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/mccarlosen",
+                    "type": "custom"
+                }
+            ],
+            "install-path": "../carlos-meneses/laravel-mpdf"
+        },
+        {
             "name": "codedungeon/php-cli-colors",
             "version": "1.12.2",
             "version_normalized": "1.12.2.0",

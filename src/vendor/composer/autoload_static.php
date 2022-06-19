@@ -37,9 +37,9 @@ class ComposerStaticInitc5ccbf5499bd25bc0d395b33de561e43
         'cc8e14526dc240491e17a838cb78508c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_server.legacy.php',
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '5c70426340c07411ceee79728a2304a8' => __DIR__ . '/..' . '/vonage/nexmo-bridge/src/autoload.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
@@ -164,6 +164,7 @@ class ComposerStaticInitc5ccbf5499bd25bc0d395b33de561e43
         array (
             'Mpdf\\' => 5,
             'Monolog\\' => 8,
+            'Meneses\\LaravelMpdf\\' => 20,
         ),
         'L' => 
         array (
@@ -526,6 +527,10 @@ class ComposerStaticInitc5ccbf5499bd25bc0d395b33de561e43
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Meneses\\LaravelMpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -5587,6 +5592,10 @@ class ComposerStaticInitc5ccbf5499bd25bc0d395b33de561e43
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'Meneses\\LaravelMpdf\\Facades\\LaravelMpdf' => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src/Facades/LaravelMpdf.php',
+        'Meneses\\LaravelMpdf\\LaravelMpdf' => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src/LaravelMpdf.php',
+        'Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider' => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src/LaravelMpdfServiceProvider.php',
+        'Meneses\\LaravelMpdf\\LaravelMpdfWrapper' => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src/LaravelMpdfWrapper.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
