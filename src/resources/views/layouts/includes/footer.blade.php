@@ -26,7 +26,6 @@
 
     @stack('before-scripts')
     <script>
-      $(".horizontal-menu .nav li:last").hide();
 
         window.localStorage.setItem('app-language', '<?php echo app()->getLocale() ?? "en"; ?>');
 
