@@ -35,7 +35,7 @@
         }
 
         * {
-            font-family: DejaVu Sans, sans-serif;
+            font-family: arial , DejaVu Sans, sans-serif;
             direction: rtl;
             margin: 0;
             padding: 0;
