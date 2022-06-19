@@ -15,11 +15,11 @@ return [
 
   'font_path' => base_path('resources/fonts/'),
 	'font_data' => [
-		'DejaVuSans' => [
-			'R'  => 'DejaVuSans-Regular.ttf',    // regular font
-			'B'  => 'DejaVuSans-Bold.ttf',       // optional: bold font
-			'I'  => 'DejaVuSans-Italic.ttf',     // optional: italic font
-			'BI' => 'DejaVuSans-Bold-Italic.ttf', // optional: bold-italic font
+		'arial' => [
+			'R'  => '../public/assets/arial.ttf',    // regular font
+			'B'  => '../public/assets/arial.ttf',       // optional: bold font
+			'I'  => '../public/assets/arial.ttf',     // optional: italic font
+			'BI' => '../public/assets/arial.ttf', // optional: bold-italic font
 			'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
 			'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
       ],
