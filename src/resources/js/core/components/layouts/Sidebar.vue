@@ -88,7 +88,6 @@ export default {
         current = location.pathname,
         sidebar = $(".sidebar"),
         sidebarType = localStorage.getItem("sidebar");
-      $(".horizontal-menu .nav li:last").hide();
 
       $(function () {
         // Add active class to nav-link based on url dynamically
