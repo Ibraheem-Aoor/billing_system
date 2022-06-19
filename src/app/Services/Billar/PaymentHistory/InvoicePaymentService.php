@@ -60,6 +60,7 @@ class InvoicePaymentService extends ApplicationBaseService
 
     public function paymentHistory(): self
     {
+
         $payment = PaymentHistory::create([
             'invoice_id' => request('invoice_id'),
             'payment_method_id' => PaymentMethod::where('alias', request('payment_type'))->first()->id,
@@ -79,6 +80,8 @@ class InvoicePaymentService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo): self
     {
+      return dd('InvoicePayment');
+
         $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);

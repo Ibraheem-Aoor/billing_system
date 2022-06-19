@@ -83,6 +83,8 @@ class PaymentHistoryService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo):self
     {
+      return dd('payment_history');
+
         $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);

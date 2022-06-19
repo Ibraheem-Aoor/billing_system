@@ -43,7 +43,6 @@ class PaymentHistoryController extends Controller
             ->save();
 
         $invoiceInfo = $payment->load('invoice')->invoice;
-
         $this->service
             ->setAttribute('file_path', 'public/pdf/invoice_' . $invoiceInfo->id . '.pdf')
             ->pdfGenerate($invoiceInfo);
