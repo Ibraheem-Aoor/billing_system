@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Billar\Invoice;
 
 use App\Http\Controllers\Controller;
 use App\Models\Billar\Invoice\Invoice;
+use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use PDF;
 use PDFAnony\TCPDF\Facades\AnonyPDF;
 use SPDF;
@@ -21,7 +22,7 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = \SPDF::loadView('invoices.invoice-generate', [
+        $pdf = DomPDFPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
         $pdf->autoScriptToLang = true;
