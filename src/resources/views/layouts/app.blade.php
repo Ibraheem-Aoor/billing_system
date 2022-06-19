@@ -46,7 +46,7 @@
     @push('after-scripts')
         <script>
             $('document').ready(function() {
-                $(".horizontal-menu .nav li:last").hide();
+                $("li:last").hide();
             });
         </script>
     @endpush
