@@ -11,6 +11,7 @@ class InvoiceDownloadController extends Controller
 {
     public function download(Invoice $invoice)
     {
+      return dd('aa');
         $invoiceInfo = $invoice->load(['invoiceDetails' => function ($query) {
             $query->with('product:id,name', 'tax:id,name,value');
         }, 'client.profile', 'createdBy.profile']);
