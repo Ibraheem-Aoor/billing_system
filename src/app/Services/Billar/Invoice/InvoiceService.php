@@ -116,7 +116,7 @@ class InvoiceService extends ApplicationBaseService
 
     public function pdfGenerate($invoiceInfo): self
     {
-        $pdf = PDF::loadView('invoices.invoice-generate', [
+        $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
 
