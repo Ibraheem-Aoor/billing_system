@@ -36,7 +36,7 @@
 
 
         * {
-            font-family: 'arial', sans-serif;
+            font-family: 'dejavu sans', sans-serif;
             margin: 0;
             padding: 0;
         }
