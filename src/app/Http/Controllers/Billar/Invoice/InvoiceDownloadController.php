@@ -21,7 +21,7 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = AnonyPDF::loadView('invoices.invoice-generate', [
+        $pdf = \SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
         $pdf->autoScriptToLang = true;
