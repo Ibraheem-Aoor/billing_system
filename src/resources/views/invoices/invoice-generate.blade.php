@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {{-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> --}}
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -36,7 +36,7 @@
 
 
         * {
-            font-family: DejaVu Sans, sans-serif;
+            /* font-family: DejaVu Sans, sans-serif; */
             margin: 0;
             padding: 0;
         }
@@ -394,7 +394,7 @@
         <div class="invoice_container__item px-5">
             <table class="w-100 font-xm table-strip" border="0" cellspacing="0" cellpadding="0">
                 <thead>
-                    <tr class="bg-dark text-light">
+                    <tr class="text-light">
                         <th class="w-45 p-1 text-left">{{ __t('product') }}</th>
                         <th class="w-10 p-1 text-right">{{ __t('quantity') }}</th>
                         <th class="w-15 p-1 text-right">{{ __t('unit_price') }}</th>
