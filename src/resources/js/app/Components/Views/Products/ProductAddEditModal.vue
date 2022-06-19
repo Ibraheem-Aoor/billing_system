@@ -9,7 +9,7 @@
             <form class="mb-0"
                   :class="{'loading-opacity': preloader}"
                   ref="form">
-                <div class="form-group d-flex flex-column align-items-center">
+                <!-- <div class="form-group d-flex flex-column align-items-center">
                     <app-input
                         id="image"
                         :label="$t('choose_image')"
@@ -25,7 +25,7 @@
                             ({{ $t('recommended_product_size') }})
                         </small>
                     </label>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label for="name">
                         {{ $t('name') }}<sup class="text-size-20 top-1">*</sup>
