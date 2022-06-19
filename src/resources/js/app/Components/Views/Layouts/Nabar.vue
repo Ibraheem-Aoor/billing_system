@@ -3,10 +3,8 @@
                 :user="user.loggedInUser"
                 :selected-language="userLanguage"
                 :language-data="languageList"
-                :notificationData="notificationList"
                 :profile-data="profileData"
                 :showIdentifier="showIdentifier"
-                :all-notification-url="urlGenerator('all-notifications')"
                 @clicked="readNotification"/>
 </template>
 
@@ -35,11 +33,11 @@ export default {
                     optionIcon: 'user',
                     url: urlGenerator(actions.MY_PROFILE)
                 },
-                {
-                    optionName: 'Notifications',
-                    optionIcon: 'bell',
-                    url: urlGenerator(actions.All_NOTIFICATION)
-                },
+                // {
+                //     optionName: 'Notifications',
+                //     optionIcon: 'bell',
+                //     url: urlGenerator(actions.All_NOTIFICATION)
+                // },
                 {
                     optionName: 'Logout',
                     optionIcon: 'log-out',
