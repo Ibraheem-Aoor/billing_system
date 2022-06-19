@@ -110,7 +110,7 @@
                             />
                         </div>
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <!-- <div class="col-md-12 mb-3">
                         <div class="form-group">
                             <app-input v-model="files" type="dropzone"/>
 	                        <small>
@@ -125,7 +125,7 @@
                                 {{ errors.attachment[0] }}
                             </small>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </form>
