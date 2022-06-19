@@ -11,5 +11,19 @@ return [
 	'tempDir'               => base_path('../temp/'),
 	'pdf_a'                 => false,
 	'pdf_a_auto'            => false,
-	'icc_profile_path'      => ''
+	'icc_profile_path'      => '',
+
+  'font_path' => base_path('resources/fonts/'),
+	'font_data' => [
+		'examplefont' => [
+			'R'  => 'DejaVuSans-Regular.ttf',    // regular font
+			'B'  => 'DejaVuSans-Bold.ttf',       // optional: bold font
+			'I'  => 'DejaVuSans-Italic.ttf',     // optional: italic font
+			'BI' => 'DejaVuSans-Bold-Italic.ttf', // optional: bold-italic font
+			'useOTL' => 0xFF,    // required for complicated langs like Persian, Arabic and Chinese
+			'useKashida' => 75,  // required for complicated langs like Persian, Arabic and Chinese
+		]
+		// ...add as many as you want.
+	]
+	// ...
 ];

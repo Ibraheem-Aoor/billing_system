@@ -12,4 +12,5 @@ return [
 	'pdf_a'                 => false,
 	'pdf_a_auto'            => false,
 	'icc_profile_path'      => ''
+  
 ];
