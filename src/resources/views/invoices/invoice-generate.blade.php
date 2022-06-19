@@ -331,7 +331,7 @@
     </style>
 </head>
 
-<body style="font-family: Arial;">
+<body style="font-family: arial;">
 <div class="invoice_container">
     <div class="invoice_container__item px-5 mt-5 text-black">
         <div class="w-25 f-left p-2">
