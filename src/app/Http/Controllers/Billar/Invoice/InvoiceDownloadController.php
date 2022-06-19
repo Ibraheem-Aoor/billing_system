@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Billar\Invoice;
 use App\Http\Controllers\Controller;
 use App\Models\Billar\Invoice\Invoice;
 use PDF;
-use SPDF;
 use PDFAnony\TCPDF\Facades\AnonyPDF;
-use Gainhq\Installer\App\Managers\DownloadManager;
+use SPDF;
+use TPDF;
 
 class InvoiceDownloadController extends Controller
 {
@@ -21,29 +21,12 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = view('invoices.invoice-generate', [
+        $pdf = AnonyPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
-        ])->render();
-        $pdfarr = [
-          'title'=>'اهلا بكم ',
-          'data'=>$pdf, // render file blade with content html
-          'header'=>['show'=>false], // header content
-          'footer'=>['show'=>false], // Footer content
-          'font'=>'aealarabiya', //  dejavusans, aefurat ,aealarabiya ,times
-          'font-size'=>12, // font-size 
-          'text'=>'', //Write
-          'rtl'=>true, //true or false 
-          'creator'=>'phpanonymous', // creator file - you can remove this key
-          'keywords'=>'phpanonymous keywords', // keywords file - you can remove this key
-          'subject'=>'phpanonymous subject', // subject file - you can remove this key
-          'filename'=>'phpanonymous.pdf', // filename example - invoice.pdf
-          'display'=>'download', // stream , download , print
-        ];
-        // $pdf->autoScriptToLang = true;
-        // $pdf->autoLangToFont  = true;
-          return AnonyPDF::HTML($pdfarr);
-          // return $d->download();
-        // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
+        ]);
+        $pdf->autoScriptToLang = true;
+        $pdf->autoLangToFont  = true;
+        return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
     protected function productTaxSum($quantity, $price, $taxValue)
