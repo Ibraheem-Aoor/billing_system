@@ -124,10 +124,7 @@ export default {
           addActiveClass($this);
         });
 
-        $(".horizontal-menu .nav li").each(function () {
-          $(this).hide();
-        });
-
+  
         // Close other submenu in sidebar on opening any
         sidebar.on("show.bs.collapse", ".collapse", function () {
           sidebar.find(".collapse.show").collapse("hide");
@@ -184,6 +181,13 @@ export default {
           }
         }
       );
+
+      $(document).ready(function()
+      {
+         $(".horizontal-menu .nav li a").each(function () {
+            $(this).hide();
+        });
+      })
     });
   },
 };
