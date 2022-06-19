@@ -36,7 +36,7 @@
 
         @font-face {
             font-family: Arial;
-            src: url('../../../../vendor/dompdf/dompdf/lib/fonts');
+            src: url('../../../../vendor/dompdf/dompdf/lib/fonts/arial.ttf');
         }
 
         * {
