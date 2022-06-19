@@ -22,6 +22,8 @@ class InvoiceDownloadController extends Controller
         $pdf = SPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
+        $pdf->autoScriptToLang = true;
+        $pdf->autoLangToFont  = true;
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
