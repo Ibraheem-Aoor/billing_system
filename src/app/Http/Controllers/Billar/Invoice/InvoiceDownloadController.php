@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Billar\Invoice\Invoice;
 use PDF;
 use SPDF;
+use TPDF;
 
 class InvoiceDownloadController extends Controller
 {
@@ -19,11 +20,13 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = SPDF::loadView('invoices.invoice-generate', [
+        $pdf = TPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
+        $downloadablePDf = TPDF::HTML($pdf);
         $pdf->autoScriptToLang = true;
         $pdf->autoLangToFont  = true;
+
         return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 

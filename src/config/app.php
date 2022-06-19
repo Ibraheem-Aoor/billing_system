@@ -191,6 +191,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
+        PDFAnony\TCPDF\AnonyServiceProvider::class,
 
         // Package Service Providers that aren't auto-discover...
 
@@ -254,6 +255,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'SPDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
+        'TPDF' =>  PDFAnony\TCPDF\Facades\AnonyPDF::class,
+
 
     ],
 ];
