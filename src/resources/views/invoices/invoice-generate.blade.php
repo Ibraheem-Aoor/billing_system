@@ -34,9 +34,10 @@
             background-color: transparent !important;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
 
         * {
-            font-family: 'dejavu sans', sans-serif;
+          font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
         }
