@@ -25,7 +25,7 @@ class InvoiceDownloadController extends Controller
             'invoice' => $invoiceInfo
         ])->render();
         $pdfarr = [
-          // 'title'=>'اهلا بكم ',
+          'title'=>'اهلا بكم ',
           'data'=>$pdf, // render file blade with content html
           'header'=>['show'=>false], // header content
           'footer'=>['show'=>false], // Footer content
@@ -41,8 +41,8 @@ class InvoiceDownloadController extends Controller
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-          $d = AnonyPDF::HTML($pdfarr);
-          return $d->download();
+          return AnonyPDF::HTML($pdfarr);
+          // return $d->download();
         // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
