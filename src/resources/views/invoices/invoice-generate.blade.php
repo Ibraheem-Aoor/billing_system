@@ -33,7 +33,7 @@
         }
 
         * {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, DejaVu Sans, sans-serif;, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
         }
