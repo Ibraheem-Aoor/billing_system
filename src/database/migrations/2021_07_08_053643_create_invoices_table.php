@@ -32,7 +32,7 @@ class CreateInvoicesTable extends Migration
             $table->longText('notes')->nullable();
             $table->longText('terms')->nullable();
             $table->foreignId('created_by')->constrained('users');
-            // $table->softDeletes();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
