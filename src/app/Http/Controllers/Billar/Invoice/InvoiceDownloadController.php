@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Billar\Invoice\Invoice;
 use PDF;
 use SPDF;
-use TPDF;
+use PDFAnony\TCPDF\Facades\AnonyPDF;
 use Gainhq\Installer\App\Managers\DownloadManager;
 
 class InvoiceDownloadController extends Controller
@@ -41,7 +41,7 @@ class InvoiceDownloadController extends Controller
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-           return \TPDF::HTML($pdfarr)->download();
+           return AnonyPDF::HTML($pdfarr);
         // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
