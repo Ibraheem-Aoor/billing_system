@@ -110,23 +110,6 @@
                             />
                         </div>
                     </div>
-                    <!-- <div class="col-md-12 mb-3">
-                        <div class="form-group">
-                            <app-input v-model="files" type="dropzone"/>
-	                        <small>
-		                        {{$t('allow_file_type')}}
-	                        </small>
-	                        <br>
-                            <small v-if="maxFileWarning" class="text-danger">
-                                {{$t('multiple_file_is_not_allowed_please_select_one_file')}}
-                            </small>
-	                        
-                            <small v-if="errors.attachment" class="text-danger">
-                                {{ errors.attachment[0] }}
-                            </small>
-                        </div>
-                    </div> -->
-
                 </div>
             </form>
         </template>
