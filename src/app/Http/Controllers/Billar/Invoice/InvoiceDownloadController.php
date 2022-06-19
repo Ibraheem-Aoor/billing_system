@@ -9,6 +9,8 @@ use PDF;
 use PDFAnony\TCPDF\Facades\AnonyPDF;
 use SPDF;
 use TPDF;
+// use Mpdf\Mpdf as MpdfMpdf;
+use MPDF;
 
 class InvoiceDownloadController extends Controller
 {
@@ -22,10 +24,10 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = PDF::loadView('invoices.invoice-generate', [
+        $pdf = MPDF::loadView('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
         ]);
-        return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
+        return $pdf->stream('invoice' . $invoice->invoice_number . '.pdf');
     }
 
     protected function productTaxSum($quantity, $price, $taxValue)
