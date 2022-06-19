@@ -37,11 +37,11 @@ class InvoiceDownloadController extends Controller
           'keywords'=>'phpanonymous keywords', // keywords file - you can remove this key
           'subject'=>'phpanonymous subject', // subject file - you can remove this key
           'filename'=>'phpanonymous.pdf', // filename example - invoice.pdf
-          'display'=>'stream', // stream , download , print
+          'display'=>'download', // stream , download , print
         ];
         // $pdf->autoScriptToLang = true;
         // $pdf->autoLangToFont  = true;
-        return TPDF::HTML($pdfarr);
+          return \TPDF::HTML($pdfarr);
         // return $downloadalbePdf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
