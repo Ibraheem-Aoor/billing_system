@@ -7,6 +7,7 @@ use App\Models\Billar\Invoice\Invoice;
 use PDF;
 use SPDF;
 use TPDF;
+use Gainhq\Installer\App\Managers\DownloadManager;
 
 class InvoiceDownloadController extends Controller
 {
@@ -20,14 +21,13 @@ class InvoiceDownloadController extends Controller
             return $this->productTaxSum($item->quantity, $item->price, $tax);
         })->sum();
 
-        $pdf = TPDF::loadView('invoices.invoice-generate', [
+        $pdf = view('invoices.invoice-generate', [
             'invoice' => $invoiceInfo
-        ]);
+        ])->render();
         $downloadablePDf = TPDF::HTML($pdf);
-        $pdf->autoScriptToLang = true;
-        $pdf->autoLangToFont  = true;
-
-        return $pdf->download('invoice' . $invoice->invoice_number . '.pdf');
+        // $pdf->autoScriptToLang = true;
+        // $pdf->autoLangToFont  = true;
+        return $downloadablePDf->download('invoice' . $invoice->invoice_number . '.pdf');
     }
 
     protected function productTaxSum($quantity, $price, $taxValue)
