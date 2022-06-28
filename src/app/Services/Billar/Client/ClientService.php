@@ -44,7 +44,7 @@ class ClientService extends ApplicationBaseService
         validator(request()->all(), [
             'client_number' => 'required|max:191|unique:clients,client_number,' . $id,
             'full_name' => 'required|max:191',
-            'email' => 'required|email',
+            'email' => 'nullable|email',
         ], [
             'full_name.required' => 'The name field is required.'
         ])->validate();
@@ -57,7 +57,7 @@ class ClientService extends ApplicationBaseService
     {
         $userId = $this->model->user_id ?: '';
         validator(request()->all(), [
-            'email' => 'required|email|unique:users,email,' . $userId,
+            'email' => 'nullable|email|unique:users,email,' . $userId,
         ])->validate();
 
         return $this;
