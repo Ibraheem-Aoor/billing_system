@@ -30,7 +30,7 @@ class ClientService extends ApplicationBaseService
         validator(request()->all(), [
             'client_number' => 'required|max:191|unique:clients,client_number',
             'full_name' => 'required|max:191',
-            'email' => 'required|email'
+            'email' => 'nullable|email'
         ], [
             'full_name.required' => 'The name field is required.'
         ])->validate();
