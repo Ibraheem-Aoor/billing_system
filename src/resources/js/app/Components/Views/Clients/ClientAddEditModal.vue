@@ -151,13 +151,13 @@
           </div>
           <div class="col-md-12">
             <div class="form-group">
-              <label for="website">
-                {{ $t("website") }}
+              <label for="trn">
+                TRN
               </label>
               <app-input
-                id="website"
+                id="trn"
                 type="text"
-                :placeholder="$t('enter_website_url')"
+                :placeholder="Enter TRN"
                 v-model="formData.website_url"
               />
             </div>
