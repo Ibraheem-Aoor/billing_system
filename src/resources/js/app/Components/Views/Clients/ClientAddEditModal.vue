@@ -67,16 +67,20 @@
                 id="contactNumber"
                 type="tel-input"
                 :placeholder="$t('enter_contact_number')"
-                v-model="formData.phone"
+                v-model="formData.trn"
               />
             </div>
           </div>
           <div class="col-md-12 mb-3">
             <div class="form-group">
               <label for="contactNumber">
-                {{ $t("TRN") }}
+                TRN
               </label>
-              <input type="text" class="form-contorl" name="trn" />
+              <app-input
+                id="trn"
+                type="text"
+                v-model="formData.trn"
+              />
             </div>
           </div>
           <div class="col-md-12 mb-3">
