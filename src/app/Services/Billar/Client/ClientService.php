@@ -30,7 +30,8 @@ class ClientService extends ApplicationBaseService
         validator(request()->all(), [
             'client_number' => 'required|max:191|unique:clients,client_number',
             'full_name' => 'required|max:191',
-            'email' => 'nullable|email'
+            'email' => 'nullable|email' ,
+            'trn' => 'nullable',
         ], [
             'full_name.required' => 'The name field is required.'
         ])->validate();
@@ -45,6 +46,8 @@ class ClientService extends ApplicationBaseService
             'client_number' => 'required|max:191|unique:clients,client_number,' . $id,
             'full_name' => 'required|max:191',
             'email' => 'nullable|email',
+            'trn' => 'nullable',
+
         ], [
             'full_name.required' => 'The name field is required.'
         ])->validate();

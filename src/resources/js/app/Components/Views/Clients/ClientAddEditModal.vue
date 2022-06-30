@@ -69,6 +69,19 @@
                     </div>
                     <div class="col-md-12 mb-3">
                         <div class="form-group">
+                            <label for="contactNumber">
+                                {{ $t('TRN') }}
+                            </label>
+                            <app-input
+                                id="contactNumber"
+                                type="tel-input"
+                                :placeholder="$t('Enter_Client_TRN')"
+                                v-model="formData.trn"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="form-group">
                             <label for="address">{{ $t('address') }}</label>
                             <app-input
                                 :id="`address`"
