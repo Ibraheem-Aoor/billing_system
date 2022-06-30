@@ -22,7 +22,6 @@ class CreateClientsTable extends Migration
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->string('postal_code')->nullable();
-            $table->string('trn')->nullable();
             $table->foreignId('country_id')
                 ->nullable()
                 ->constrained('countries')

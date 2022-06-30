@@ -61,6 +61,7 @@ class ClientService extends ApplicationBaseService
         $userId = $this->model->user_id ?: '';
         validator(request()->all(), [
             'email' => 'nullable|email|unique:users,email,' . $userId,
+            'trn' => 'nullable',
         ])->validate();
 
         return $this;
