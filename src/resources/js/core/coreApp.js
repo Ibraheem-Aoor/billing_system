@@ -15,7 +15,7 @@ Vue.use(VueToastr, {
  * Components
  *   1. Component name prefix should "app"-component-name
  * */
-Vue.component('app-input', require('./components/input/Index').default);
+// Vue.component('app-input', require('./components/input/Index').default);
 Vue.component('app-pre-loader', require('./components/preloders/Preloader').default);
 Vue.component('app-overlay-loader', require('./components/preloders/OverlayLoader').default);
 Vue.component('app-modal', require('./components/modal/Modal').default);
