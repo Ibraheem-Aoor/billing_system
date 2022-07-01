@@ -199,6 +199,7 @@ export default {
             modalId: 'client-add-edit-modal',
             formData: {
                 full_name: '',
+                trn: ''
             },
         }
     },
