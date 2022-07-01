@@ -38,8 +38,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "browserslist": {
-        "development": "last 1 version",
-        "production": ">2%, Firefox ESR"
+        "development": "last 3 versions"
     },
     "jest": {
         "testURL": "http://localhost",
