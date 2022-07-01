@@ -93,6 +93,7 @@ class ClientService extends ApplicationBaseService
             'first_name' => request('first_name'),
             'last_name' => request('last_name'),
             'email' => request('email'),
+            'trn' => request('trn'),
         ]);
         return $this;
     }
