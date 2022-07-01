@@ -376,6 +376,7 @@
                         <small>{{ __t('address') }}: {{ $invoice->createdBy->profile->address }}</small>
                     @endif
                     @if ($invoice->createdBy->trn)
+                        <br>
                         <small>TRN: {{ $invoice->createdBy->trn }}</small>
                     @endif
                 @endif
@@ -391,6 +392,7 @@
                             <small>{{ __t('address') }}: {{ $invoice->client->profile->address }}</small>
                         @endif
                         @if ($invoice->client->trn)
+                            <br>
                             <small>TRN: {{ $invoice->client->trn }}</small>
                         @endif
                     @endif

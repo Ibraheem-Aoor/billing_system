@@ -44,6 +44,14 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <th class="border-0 default-font-color">TRN</th>
+                                    <td class="border-0 text-muted">
+                                        {{
+                                            formData.user ? formData.user.trn ? formData.user.trn : $t('not_added_yet') : ''
+                                        }}
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th class="border-0 default-font-color">{{ $t('city') }}</th>
                                     <td class="border-0 text-muted">{{ formData.city }}</td>
                                 </tr>
