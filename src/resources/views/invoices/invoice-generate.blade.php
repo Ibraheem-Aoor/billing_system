@@ -375,6 +375,9 @@
                         <br>
                         <small>{{ __t('address') }}: {{ $invoice->createdBy->profile->address }}</small>
                     @endif
+                    @if ($invoice->createdBy->trn)
+                        <small>TRN: {{ $invoice->createdBy->trn }}</small>
+                    @endif
                 @endif
             </div>
             <div class="w-50 f-right font-xm">
@@ -387,9 +390,9 @@
                             <br>
                             <small>{{ __t('address') }}: {{ $invoice->client->profile->address }}</small>
                         @endif
-                        {{-- @if ($invoice->client()->user->trn)
-                        <small>TRN: {{ $invoice->client()->user->trn}}</small>
-                        @endif --}}
+                        @if ($invoice->client->trn)
+                            <small>TRN: {{ $invoice->client->trn }}</small>
+                        @endif
                     @endif
                 </div>
                 <div class="f-clear"></div>
