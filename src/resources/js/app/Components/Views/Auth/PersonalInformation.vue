@@ -73,7 +73,7 @@
       <div class="form-group">
         <div class="row">
           <div class="col-lg-3 col-xl-3 d-flex align-items-center">
-            <label for="user_email" class="text-left d-block mb-lg-2 mb-xl-0">
+            <label for="trn" class="text-left d-block mb-lg-2 mb-xl-0">
               TRN
             </label>
           </div>
