@@ -24,7 +24,7 @@ class UserUpdateController extends Controller
     public function update(Request $request)
     {
         auth()->user()->update(
-            $request->only('first_name', 'last_name', 'email')
+            $request->only('first_name', 'last_name', 'email' , 'trn')
         );
 
         Profile::query()->updateOrCreate([

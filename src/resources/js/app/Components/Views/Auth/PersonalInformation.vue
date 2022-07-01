@@ -73,6 +73,22 @@
       <div class="form-group">
         <div class="row">
           <div class="col-lg-3 col-xl-3 d-flex align-items-center">
+            <label for="user_email" class="text-left d-block mb-lg-2 mb-xl-0">
+              TRN
+            </label>
+          </div>
+          <div class="col-lg-8 col-xl-8">
+            <app-input
+              id="trn"
+              type="text"
+              v-model="user.trn"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-lg-3 col-xl-3 d-flex align-items-center">
             <label class="text-left d-block mb-lg-2 mb-xl-0">{{
               $t("gender")
             }}</label>
