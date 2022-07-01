@@ -206,7 +206,7 @@ export default {
     methods: {
         submit() {
             const {first_name, last_name} = this.names;
-            const formData = {...this.formData, first_name, last_name , trn}
+            const formData = {...this.formData, first_name, last_name }
             this.save(formData);
         },
 
