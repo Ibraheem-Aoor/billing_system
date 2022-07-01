@@ -79,6 +79,6 @@ Vue.prototype.$hub = new Vue();
  * cookies
  */
 
-import AppCookie from "../helpers/cookies/AppCookies";
-window.AppCookie = AppCookie;
+// import AppCookie from "../helpers/cookies/AppCookies";
+// window.AppCookie = AppCookie;
 
