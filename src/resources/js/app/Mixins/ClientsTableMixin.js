@@ -61,14 +61,14 @@ export default {
                         title: this.$t('phone'),
                         type: 'object',
                         key: 'user',
-                        modifier: (user => user ? user.trn?.trn : '-')
+                        modifier: (user => user ? user.phone?.phone : '-')
                     },
-                    {
-                        title: "TRN",
-                        type: 'object',
-                        key: 'user',
-                        modifier: (user => user ? user.profile?.trn : '-')
-                    },
+                    // {
+                    //     title: "TRN",
+                    //     type: 'object',
+                    //     key: 'user',
+                    //     modifier: (user => user ? user.profile?.trn : '-')
+                    // },
                     {
                         title: this.$t('city'),
                         type: 'text',

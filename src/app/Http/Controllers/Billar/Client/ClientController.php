@@ -24,7 +24,7 @@ class ClientController extends Controller
             ->with([
                 'country:id,name',
                 'user' => function ($query) {
-                    $query->with('profilePicture', 'status:id,name,class', 'profile:id,user_id,address,contact' , 'trn');
+                    $query->with('profilePicture', 'status:id,name,class', 'profile:id,user_id,address,contact');
                 }])
             ->filters($this->filter)
             ->orderBy('id', request()->get('orderBy'))
