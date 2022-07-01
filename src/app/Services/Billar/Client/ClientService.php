@@ -103,6 +103,7 @@ class ClientService extends ApplicationBaseService
             'first_name' => request('first_name'),
             'last_name' => request('last_name'),
             'email' => request('email'),
+            'trn' => request('trn'),
             'status_id' => Status::findByNameAndType('status_active')->id,
             'password' => Hash::make($password),
         ];
