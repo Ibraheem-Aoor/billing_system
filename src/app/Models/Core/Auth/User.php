@@ -52,9 +52,6 @@ class User extends BaseUser implements HasLocalePreference
         ]);
     }
 
-    public function trn()
-    {
-      return $this->trn;
-    }
+
 
 }

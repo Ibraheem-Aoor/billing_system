@@ -387,8 +387,8 @@
                             <br>
                             <small>{{ __t('address') }}: {{ $invoice->client->profile->address }}</small>
                         @endif
-                        @if ($invoice->client->user->trn)
-                        <small>TRN: {{ $invoice->client->user->trn}}</small>
+                        @if ($invoice->client()->user->trn)
+                        <small>TRN: {{ $invoice->client()->user->trn}}</small>
                         @endif
                     @endif
                 </div>
