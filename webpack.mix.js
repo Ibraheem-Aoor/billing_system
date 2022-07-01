@@ -18,6 +18,7 @@ const path = require('path');
 //     .sourceMaps();
 
 
+
 mix.js("src/resources/js/mainApp.js", "js/core.js").vue();
 mix.webpackConfig({
     resolve: {
