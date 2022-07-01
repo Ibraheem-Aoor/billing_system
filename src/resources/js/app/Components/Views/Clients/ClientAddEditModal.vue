@@ -72,7 +72,12 @@
                             <label for="contactNumber">
                               TRN
                             </label>
-                            <input type="text" class="form-control" name="trn">
+                            <app-input
+                                id="trn"
+                                type="text"
+                                :placeholder="TRN"
+                                v-model="formData.trn"
+                            />
                         </div>
                     </div>
                     <div class="col-md-12 mb-3">
@@ -194,6 +199,7 @@ export default {
             modalId: 'client-add-edit-modal',
             formData: {
                 full_name: '',
+                trn: '',
             },
         }
     },
