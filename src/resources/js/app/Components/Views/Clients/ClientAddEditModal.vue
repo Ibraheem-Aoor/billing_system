@@ -206,7 +206,7 @@ export default {
     methods: {
         submit() {
             const {first_name, last_name} = this.names;
-            const formData = {...this.formData, first_name, last_name}
+            const formData = {...this.formData, first_name, last_name , trn}
             this.save(formData);
         },
 
@@ -216,6 +216,7 @@ export default {
             this.formData.address = this.formData.user?.profile?.address ? this.formData.user.profile.address : '';
             this.formData.email = this.formData.user?.email;
             this.formData.full_name = this.formData.user?.full_name;
+            this.formData.trn = this.formData.user?.trn;
         }
     },
     computed: {
