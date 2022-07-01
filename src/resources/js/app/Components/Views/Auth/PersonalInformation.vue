@@ -81,7 +81,7 @@
             <app-input
               id="trn"
               type="text"
-              v-model="user.trn"
+              v-model="user.loggedInUser.trn"
             />
           </div>
         </div>
@@ -205,7 +205,7 @@ export default {
       this.preloader = true;
     },
     submit() {
-      let submitData = {...this.user.loggedInUser , ...this.user.trn};
+      let submitData = this.user.loggedInUser;
       if (submitData.date_of_birth)
         submitData.date_of_birth = this.getDateFormatForBackend(
           submitData.date_of_birth
