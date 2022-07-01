@@ -205,7 +205,7 @@ export default {
       this.preloader = true;
     },
     submit() {
-      let submitData = this.user.loggedInUser;
+      let submitData = {...this.user.loggedInUser , ...this.user.trn};
       if (submitData.date_of_birth)
         submitData.date_of_birth = this.getDateFormatForBackend(
           submitData.date_of_birth
