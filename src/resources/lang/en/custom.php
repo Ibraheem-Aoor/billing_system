@@ -681,6 +681,7 @@ return array_merge([
     'status_partially_paid' => 'Partially paid',
     'status_paid' => 'Paid',
     'status_overdue' => 'Overdue',
+    'status_returned' => 'Returned',
 
     // Dashboard
     'received_amount' => 'Received amount',
