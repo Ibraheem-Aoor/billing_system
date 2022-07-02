@@ -47,6 +47,7 @@
 
         <app-table :id="tableId" :options="options" @action="getListAction"/>
 
+
         <!-- Client Add/Edit Modal -->
         <invoice-add-edit-modal
             v-if="isInvoiceAddEditModalActive"
