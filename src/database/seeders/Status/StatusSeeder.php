@@ -63,6 +63,11 @@ class StatusSeeder extends Seeder
                 'type' => 'invoice',
                 'class' => 'danger'
             ],
+            [
+                'name' => 'status_returned',
+                'type' => 'invoice',
+                'class' => 'warning'
+            ],
         ];
 
         Status::query()->insert($statuses);
