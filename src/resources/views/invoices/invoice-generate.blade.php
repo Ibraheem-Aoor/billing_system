@@ -377,7 +377,7 @@
                     @endif
                     @if ($invoice->createdBy->trn)
                         <br>
-                        <small>TRN: {{ $invoice->createdBy->trn }}</small>
+                        <small>OUR TRN: {{ $invoice->createdBy->trn }}</small>
                     @endif
                 @endif
             </div>
